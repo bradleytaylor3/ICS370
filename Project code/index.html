@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graduation Efficiency Planner</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <p><input type="text" id="course-search" placeholder="Search for your major here"><button type="submit" id="search-major">Search</button><button type="button" id="clear-search">Clear search</button> </p>
+    <p><select id="course-dropdown">
+        <option selected="selected">Select your major below</option>
+        <option id="accounting-bs">Accounting BS</option>
+        <option id="adult-basic-education-certificate">Adult Basic Education Certificate</option>
+        <option id="advanced-dental-therapy-msadt">Advanced Dental Therapy MSADT</option>
+        <option id="advertising-minor">Advertising Minor</option>
+        <option id="advocacy-and-leadership-track,-social-science-ba">Advocacy and Leadership Track, Social Science BA</option>
+        <option id="advocacy-and-political-leadership-mapl">Advocacy and Political Leadership MAPL</option>
+        <option id="aging-studies/gerontology-minor">Aging Studies/Gerontology Minor</option>
+        <option id="alcohol-and-drug-counseling-bs">Alcohol and Drug Counseling BS</option>
+        <option id="alcohol-and-drug-recovery-counseling-ms">Alcohol and Drug Recovery Counseling MS</option>
+        <option id="anthropology-minor">Anthropology Minor</option>
+        <option id="anthropology-track,-social-science-ba">Anthropology Track, Social Science BA</option>
+        <option id="applied-statistics-minor">Applied Statistics Minor</option>
+        <option id="biochemistry-bs">Biochemistry BS</option>
+        <option id="biology-ba">Biology BA</option>
+        <option id="biology-bs">Biology BS</option>
+        <option id="biology-minor">Biology Minor</option>
+        <option id="business-administration-bs">Business Administration BS</option>
+        <option id="business-administration-dba">Business Administration DBA</option>
+        <option id="business-administration-mba">Business Administration MBA</option>
+        <option id="business-administration-minor">Business Administration Minor</option>
+        <option id="business-analytics-gcert">Business Analytics GCERT</option>
+        <option id="business-analytics-minor">Business Analytics Minor</option>
+        <option id="chemistry-bs">Chemistry BS</option>
+        <option id="chemistry-minor">Chemistry Minor</option>
+        <option id="child-psychology-minor">Child Psychology Minor</option>
+        <option id="civic-engagement-minor">Civic Engagement Minor</option>
+        <option id="co-occurring-disorders-recovery-counseling-ms">Co-occurring Disorders Recovery Counseling MS</option>
+        <option id="community-and-applied-social-psychology-minor">Community and Applied Social Psychology Minor</option>
+        <option id="community-organizing-and-development-minor">Community Organizing and Development Minor</option>
+        <option id="computer-application-development-bas">Computer Application Development BAS</option>
+        <option id="computer-forensics-bas">Computer Forensics BAS</option>
+        <option id="computer-forensics-minor">Computer Forensics Minor</option>
+        <option id="computer-forensics-post-baccalaureate-ucert">Computer Forensics Post-baccalaureate UCERT</option>
+        <option id="computer-information-technology-bs">Computer Information Technology BS</option>
+        <option id="computer-science-bs">Computer Science BS</option>
+        <option id="computer-science-ms">Computer Science MS</option>
+        <option id="computer-science-psm">Computer Science PSM</option>
+        <option id="creative-writing-ba">Creative Writing BA</option>
+        <option id="creative-writing-minor">Creative Writing Minor</option>
+        <option id="criminal-justice-ba">Criminal Justice BA</option>
+        <option id="criminal-justice-minor">Criminal Justice Minor</option>
+        <option id="criminal-justice-ms">Criminal Justice MS</option>
+        <option id="cyber-operations-ms">Cyber Operations MS</option>
+        <option id="cybersecurity--post-baccalaureate-ucert">Cybersecurity  Post-baccalaureate UCERT</option>
+        <option id="cybersecurity-bs">Cybersecurity BS</option>
+        <option id="cybersecurity-minor">Cybersecurity Minor</option>
+        <option id="data-science-bs">Data Science BS</option>
+        <option id="database-administration-gcert">Database Administration GCERT</option>
+        <option id="dental-hygiene-bsdh">Dental hygiene BSDH</option>
+        <option id="design-of-user-experience-gcert">Design of User Experience GCERT</option>
+        <option id="design-of-user-experience-minor">Design of User Experience Minor</option>
+        <option id="digital-media-minor">Digital Media Minor</option>
+        <option id="disability-studies-minor">Disability Studies Minor</option>
+        <option id="early-childhood-studies-bas">Early Childhood Studies BAS</option>
+        <option id="economics-bs">Economics BS</option>
+        <option id="economics-minor">Economics Minor</option>
+        <option id="educational-psychology-minor">Educational Psychology Minor</option>
+        <option id="electronic-discovery-minor">Electronic Discovery Minor</option>
+        <option id="english-as-a-second-language-minor">English as a Second Language Minor</option>
+        <option id="english-ba">English BA</option>
+        <option id="english-for-teaching-bs">English for Teaching BS</option>
+        <option id="english-minor">English Minor</option>
+        <option id="entrepreneurship-and-innovation-bs">Entrepreneurship and Innovation BS</option>
+        <option id="entrepreneurship-and-innovation-minor">Entrepreneurship and Innovation Minor</option>
+        <option id="environmental-communication-minor">Environmental Communication Minor</option>
+        <option id="environmental-science-bs">Environmental Science BS</option>
+        <option id="ethnic-studies-ba">Ethnic Studies BA</option>
+        <option id="ethnic-studies-minor">Ethnic Studies Minor</option>
+        <option id="evidence-based-practices-in-corrections-certificate">Evidence-Based Practices in Corrections Certificate</option>
+        <option id="family-nurse-practitioner-dnp">Family Nurse Practitioner DNP</option>
+        <option id="family-studies-minor">Family Studies Minor</option>
+        <option id="finance-bs">Finance BS</option>
+        <option id="game-studies-minor">Game Studies Minor</option>
+        <option id="gender-studies-ba">Gender Studies BA</option>
+        <option id="gender-studies-minor">Gender Studies Minor</option>
+        <option id="generalist-track,-social-science-ba">Generalist Track, Social Science BA</option>
+        <option id="global-studies-track,-social-science-ba">Global Studies Track, Social Science BA</option>
+        <option id="global-supply-chain-management-gcert">Global Supply Chain Management GCERT</option>
+        <option id="health-system-studies-bs">Health System Studies BS</option>
+        <option id="history-ba">History BA</option>
+        <option id="history-minor">History Minor</option>
+        <option id="human-resource-management-bs">Human Resource Management BS</option>
+        <option id="human-resource-management-minor">Human Resource Management Minor</option>
+        <option id="human-services-bs">Human Services BS</option>
+        <option id="human-services-family-studies-bhs">Human Services Family Studies BHS</option>
+        <option id="human-services-leadership-and-administration-bhs">Human Services Leadership and Administration BHS</option>
+        <option id="humanities-minor">Humanities Minor</option>
+        <option id="individualized-studies-ba">Individualized Studies BA</option>
+        <option id="industrial-&-applied-mathematics-bs">Industrial & Applied Mathematics BS</option>
+        <option id="industrial-&-applied-mathematics-minor">Industrial & Applied Mathematics Minor</option>
+        <option id="industrial-and-organizational-psychology-minor">Industrial and Organizational Psychology Minor</option>
+        <option id="information-assurance-and-information-technology-security-gcert">Information Assurance and Information Technology Security GCERT</option>
+        <option id="information-assurance-bas">Information Assurance BAS</option>
+        <option id="international-business-bs">International Business BS</option>
+        <option id="international-business-minor">International Business Minor</option>
+        <option id="law-enforcement-bs-track-1">Law Enforcement BS Track 1</option>
+        <option id="law-enforcement-bs-track-2">Law Enforcement BS Track 2</option>
+        <option id="law-enforcement-bs:-major-for-licensed-peace-officers-track-3-">Law Enforcement BS: Major for Licensed Peace Officers Track 3 </option>
+        <option id="law-enforcement-licensing-certificate-ucert">Law Enforcement Licensing Certificate UCERT</option>
+        <option id="liberal-arts-ba">Liberal Arts BA</option>
+        <option id="liberal-studies-ma">Liberal Studies MA</option>
+        <option id="life-sciences-teaching-bs">Life Sciences Teaching BS</option>
+        <option id="management-bs">Management BS</option>
+        <option id="management-information-systems-bs">Management Information Systems BS</option>
+        <option id="management-information-systems-generalist-gcert">Management Information Systems Generalist GCERT</option>
+        <option id="management-information-systems-minor">Management Information Systems Minor</option>
+        <option id="marketing-bs">Marketing BS</option>
+        <option id="master-of-arts-and-master-of-science-in-individualized-studies">Master of Arts and Master of Science in Individualized Studies</option>
+        <option id="master-of-nonprofit-leadership-and-management-mnlm">Master of Nonprofit Leadership and Management MNLM</option>
+        <option id="master-of-public-administration-mpa">Master of Public Administration MPA</option>
+        <option id="master-of-public-and-nonprofit-administration-mpna">Master of Public and Nonprofit Administration MPNA</option>
+        <option id="master-of-science-in-management-information-systems-ms-in-mis">Master of Science in Management Information Systems MS in MIS</option>
+        <option id="mathematics-ba">Mathematics BA</option>
+        <option id="mathematics-gcert">Mathematics GCERT</option>
+        <option id="mathematics-teaching-bs">Mathematics Teaching BS</option>
+        <option id="media-literacy-minor">Media Literacy Minor</option>
+        <option id="media-studies">Media Studies</option>
+        <option id="mental-health-psychology-minor">Mental Health Psychology Minor</option>
+        <option id="nurse-anesthetist-dnp">Nurse Anesthetist DNP</option>
+        <option id="nurse-anesthetist-msn">Nurse Anesthetist MSN</option>
+        <option id="nursing-entry-level-msn">Nursing Entry Level MSN</option>
+        <option id="nursing-mane-bsn">Nursing MANE BSN</option>
+        <option id="nursing-rn-to-bsn">Nursing RN to BSN</option>
+        <option id="organizational-administration-bas">Organizational Administration BAS</option>
+        <option id="organizational-communication-minor">Organizational Communication Minor</option>
+        <option id="philosophy-ba">Philosophy BA</option>
+        <option id="philosophy-minor">Philosophy Minor</option>
+        <option id="physics-minor">Physics Minor</option>
+        <option id="political-science-minor">Political Science Minor</option>
+        <option id="political-science-track,-social-science-ba">Political Science Track, Social Science BA</option>
+        <option id="practical-ethics-minor">Practical Ethics Minor</option>
+        <option id="professional-communication-ba:-organizational-communication-track-">Professional Communication BA: Organizational Communication Track </option>
+        <option id="professional-communication-ba:-public-relations-track-">Professional Communication BA: Public Relations Track </option>
+        <option id="project-management-gcert">Project Management GCERT</option>
+        <option id="project-management-minor">Project Management Minor</option>
+        <option id="psychology-ba">Psychology BA</option>
+        <option id="psychology-ma">Psychology MA</option>
+        <option id="psychology-minor">Psychology Minor</option>
+        <option id="public-relations-minor">Public Relations Minor</option>
+        <option id="religious-studies-minor">Religious Studies Minor</option>
+        <option id="research-and-information-studies-minor">Research and Information Studies Minor</option>
+        <option id="risk-management-and-insurance-minor">Risk Management and Insurance Minor</option>
+        <option id="screenwriting-ba">Screenwriting BA</option>
+        <option id="screenwriting-minor">Screenwriting Minor</option>
+        <option id="social-science-ba">Social Science BA</option>
+        <option id="social-studies-for-teaching-bs">Social Studies for Teaching BS</option>
+        <option id="social-work">Social Work</option>
+        <option id="sociology-minor">Sociology Minor</option>
+        <option id="sociology-track,-social-science-ba">Sociology Track, Social Science BA</option>
+        <option id="studio-arts-ba">Studio Arts BA</option>
+        <option id="studio-arts-minor">Studio Arts Minor</option>
+        <option id="substance-use-disorders-post-baccalaureate-ucert">Substance Use Disorders Post-baccalaureate UCERT</option>
+        <option id="supply-chain-and-operations-management-bs">Supply Chain and Operations Management BS</option>
+        <option id="supply-chain-and-operations-management-minor">Supply Chain and Operations Management Minor</option>
+        <option id="systems-analysis-gcert">Systems Analysis GCERT</option>
+        <option id="technical-communication-and-professional-writing-ba">Technical Communication and Professional Writing BA</option>
+        <option id="technical-communication-minor">Technical Communication Minor</option>
+        <option id="technical-communication-ms">Technical Communication MS</option>
+        <option id="theater-ba">Theater BA</option>
+        <option id="theater-minor">Theater Minor</option>
+        <option id="transportation-management-concentration-(indiv-ba)">Transportation Management Concentration (Indiv BA)</option>
+        <option id="urban-early-childhood-education-bs-for-birth-grade-3-licensure-">Urban Early Childhood Education BS for Birth-Grade 3 Licensure </option>
+        <option id="urban-education-ms:-curriculum,-pedagogy-and-schooling-concentration">Urban Education MS: Curriculum, Pedagogy and Schooling concentration</option>
+        <option id="urban-education-ms:-english-as-a-second-language-concentration">Urban Education MS: English as a Second Language Concentration</option>
+        <option id="urban-education-ms:-secondary-education-teacher-preparation-concentration-for-english-teaching">Urban Education MS: Secondary Education Teacher Preparation Concentration for English Teaching</option>
+        <option id="urban-education-ms:-secondary-education-teacher-preparation-concentration-for-mathematics-teaching">Urban Education MS: Secondary Education Teacher Preparation Concentration for Mathematics Teaching</option>
+        <option id="urban-education-ms:-secondary-education-teacher-preparation-concentration-for-social-studies-teaching">Urban Education MS: Secondary Education Teacher Preparation Concentration for Social Studies Teaching</option>
+        <option id="urban-education-ms:-secondary-education-teacher-preparation-for-life-sciences-teaching-concentration">Urban Education MS: Secondary Education Teacher Preparation for Life Sciences Teaching Concentration</option>
+        <option id="urban-education-ms:-special-education-concentration">Urban Education MS: Special Education concentration</option>
+        <option id="urban-elementary-education-bs-for-k-grade-6-licensure">Urban Elementary Education BS for K-Grade 6 Licensure</option>
+        <option id="urban-secondary-education-licensure">Urban Secondary Education Licensure</option>
+        <option id="violence-prevention-and-intervention-minor">Violence Prevention and Intervention Minor</option>
+    </select></p>
+    <div class="tab">
+        <button id="core-courses-tab" class="tablinks" onclick="openTab('core-courses')">Core Courses</button>
+        <button id="liberal-studies-tab" class="tablinks" onclick="openTab('liberal-studies')">Liberal Studies</button>
+        <button id="rigr-tab" class="tablinks" onclick="openTab('rigr')">Racial Issues Graduation Requirement</button>
+        <button id="goal-1-tab" class="tablinks" onclick="openTab('goal-1')">Goal 1</button>
+        <button id="goal-2-tab" class="tablinks" onclick="openTab('goal-2')">Goal 2</button>
+        <button id="goal-3-tab" class="tablinks" onclick="openTab('goal-3')">Goal 3</button>
+        <button id="goal-4-tab" class="tablinks" onclick="openTab('goal-4')">Goal 4</button>
+        <button id="goal-5-tab" class="tablinks" onclick="openTab('goal-5')">Goal 5</button>
+        <button id="goal-6-tab" class="tablinks" onclick="openTab('goal-6')">Goal 6</button>
+        <button id="goal-7-tab" class="tablinks" onclick="openTab('goal-7')">Goal 7</button>
+        <button id="goal-8-tab" class="tablinks" onclick="openTab('goal-8')">Goal 8</button>
+        <button id="goal-9-tab" class="tablinks" onclick="openTab('goal-9')">Goal 9</button>
+        <button id="goal-10-tab" class="tablinks" onclick="openTab('goal-10')">Goal 10</button>
+        <button id="electives-tab" class="tablinks" onclick="openTab('electives')">Electives</button>
+    </div>
+    <div id="core-courses" class="tabcontent">
+        <h3><u>Core Courses</u></h3>
+        <table id="core-courses-table">
+        </table>
+    </div>
+    <div id="liberal-studies" class="tabcontent">
+        <h3><u>Liberal Studies</u></h3>
+        <table id="liberal-studies-table">
+        </table>
+    </div>
+    <div id="rigr" class="tabcontent">
+        <h3><u>Racial Issues Graduation Requirement</u></h3>
+        <p>All new or readmitted undergraduate students admitted fall 2016 or later must complete an approved learning
+            experience (at least 3 credits) with a significant focus on race and racism to graduate with a bachelor's
+            degree from the university.  Upon review, an approved prior learning, independent study, theory seminar or
+            transfer course from other accredited institutions may also be used to meet this graduation requirement.</p>
+        <table id="rigr-table">
+            <tr><td>BIOL-107</td><td>Biology, Race, and Racism</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>EDU-430</td><td>Historical and Cultural Foundations of Urban Education</td><td>3</td></tr>
+            <tr><td>ETHS-100</td><td>Introduction to Ethnic Studies</td><td>4</td></tr>
+            <tr><td>ETHS-200</td><td>Theories of Race, Ethnicity and Culture</td><td>4</td></tr>
+            <tr><td>ETHS-302</td><td>Immigrant Communities and the Trajectories of Othering</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-318</td><td>Trauma and Traumascapes: Identity, Legacy, and Memory</td><td>4</td></tr>
+            <tr><td>ETHS-370</td><td>Black Thought</td><td>4</td></tr>
+            <tr><td>HRM-335</td><td>Understanding and Addressing Race in the Workplace</td><td>4</td></tr>
+            <tr><td>HSCD-303</td><td>Racial and Cultural Considerations for Alcohol and Drug Counseling</td><td>4</td></tr>
+            <tr><td>HSCD-304</td><td>Substance Use and Native Americans</td><td>4</td></tr>
+            <tr><td>HSER-395</td><td>Intersection of Race and Diversity in Human Services</td><td>4</td></tr>
+            <tr><td>LING-326</td><td>Language and Culture</td><td>4</td></tr>
+            <tr><td>LIT-315</td><td>Gender and Race in Literature and Film</td><td>4</td></tr>
+            <tr><td>LIT-362</td><td>Black Women Writers</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>PHIL-366</td><td>Race and Racism: Philosophical Problems</td><td>4</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-356</td><td>Early Childhood Development within a Social/Cultural and Historical Context</td><td>3</td></tr>
+            <tr><td>SOWK-341</td><td>Comparative Racial/Ethnic Analysis I</td><td>4</td></tr>
+            <tr><td>SOWK-542</td><td>Comparative Racial/Ethnic Analysis II</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-1" class="tabcontent">
+        <h3><u>Goal 1: Communication</u></h3>
+        <p>To develop writers and speakers who use the English language effectively and who read, write, speak and
+            listen critically. As a base, all students should complete introductory communication requirements early
+            in their collegiate studies. Writing competency is an ongoing process to be reinforced through
+            writing-intensive courses and writing across the curriculum. Speaking and listening skills need
+            reinforcement through multiple opportunities for interpersonal communication, public speaking,
+            and discussion.</p>
+        <table id="goal-1-table">
+            <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
+            <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
+            <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
+            <tr><td>COMM-231</td><td>Introduction to Interpersonal Communication</td><td>3</td></tr>
+            <tr><td>COMM-231</td><td>Introduction to Interpersonal Communication</td><td>3</td></tr>
+            <tr><td>COMM-231</td><td>Introduction to Interpersonal Communication</td><td>3</td></tr>
+            <tr><td>COMM-320</td><td>Individual Rights and Public Discourse</td><td>4</td></tr>
+            <tr><td>COMM-351</td><td>Communication in Work Groups</td><td>4</td></tr>
+            <tr><td>COMM-352</td><td>Organizational Communication</td><td>4</td></tr>
+            <tr><td>COMM-352</td><td>Organizational Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-381</td><td>Public Relations Principles</td><td>4</td></tr>
+            <tr><td>LING-111</td><td>Vocabulary Study</td><td>3</td></tr>
+            <tr><td>MDST-363</td><td>Children, Adolescents and the Media</td><td>4</td></tr>
+            <tr><td>RDNG-112</td><td>The Educated Reader: Analytical Reading</td><td>4</td></tr>
+            <tr><td>THEA-331</td><td>Voice: Speaking from Experience</td><td>4</td></tr>
+            <tr><td>THEA-345</td><td>Acting III</td><td>4</td></tr>
+            <tr><td>WRIT-121</td><td>Writing I Intensive: Learning Community</td><td>5</td></tr>
+            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
+            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
+            <tr><td>WRIT-261</td><td>Business Writing</td><td>3</td></tr>
+            <tr><td>WRIT-261</td><td>Business Writing</td><td>3</td></tr>
+            <tr><td>WRIT-271</td><td>Technical Writing</td><td>3</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: Focus on Nursing</td><td>4</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: Focus on Nursing</td><td>4</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: Focus on Nursing</td><td>4</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: Focus on Nursing</td><td>4</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: All Majors</td><td>4</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-2" class="tabcontent">
+        <h3><u>Goal 2: Critical Thinking</u></h3>
+        <p>To develop thinkers who are able to unify factual, creative, rational, and value-sensitive modes of thought.
+            Critical thinking will be taught and used throughout the general education curriculum in order to develop
+            students' awareness of their own thinking and problem-solving procedures. To integrate new skills into
+            their customary ways of thinking, students must be actively engaged in practicing thinking skills and
+            applying them to open-ended problems.</p>
+        <table id="goal-2-table">
+        </table>
+    </div>
+    <div id="goal-3" class="tabcontent">
+        <h3><u>Goal 3: Natural Sciences</u></h3>
+        <p>To improve students' understanding of natural science principles and of the methods of scientific inquiry,
+            i.e., the ways in which scientists investigate natural science phenomena. As a basis for lifelong learning,
+            students need to know the vocabulary of science and to realize that while a set of principles has been
+            developed through the work of previous scientists, ongoing scientific inquiry and new knowledge will bring
+            changes in some of the ways scientists view the world. By studying the problems that engage today's
+            scientists, students learn to appreciate the importance of science in their lives and to understand the
+            value of a scientific perspective. Students should be encouraged to study both the biological and physical
+            sciences.</p>
+        <table id="goal-3-table">
+            <tr><td>BIOL-105</td><td>Human Biology</td><td>4</td></tr>
+            <tr><td>BIOL-107</td><td>Biology, Race, and Racism</td><td>4</td></tr>
+            <tr><td>BIOL-111</td><td>General Biology I</td><td>4</td></tr>
+            <tr><td>BIOL-111</td><td>General Biology I</td><td>4</td></tr>
+            <tr><td>BIOL-112</td><td>General Biology II</td><td>4</td></tr>
+            <tr><td>BIOL-112</td><td>General Biology II</td><td>4</td></tr>
+            <tr><td>BIOL-221</td><td>Human Anatomy and Physiology I</td><td>4</td></tr>
+            <tr><td>BIOL-221L</td><td>Human Anatomy and Physiology I Lab</td><td>0</td></tr>
+            <tr><td>BIOL-222</td><td>Human Anatomy and Physiology II</td><td>4</td></tr>
+            <tr><td>BIOL-222L</td><td>Human Anatomy and Physiology II Lab</td><td>0</td></tr>
+            <tr><td>BIOL-222L</td><td>Human Anatomy and Physiology II Lab</td><td>0</td></tr>
+            <tr><td>BIOL-225</td><td>Basic Microbiology</td><td>4</td></tr>
+            <tr><td>BIOL-225L</td><td>Basic Microbiology Lab</td><td>0</td></tr>
+            <tr><td>BIOL-225L</td><td>Basic Microbiology Lab</td><td>0</td></tr>
+            <tr><td>CHEM-105</td><td>Survey of General, Organic, and Biochemistry</td><td>4</td></tr>
+            <tr><td>CHEM-105L</td><td>Survey of General, Organic, and Biochemistry</td><td>0</td></tr>
+            <tr><td>CHEM-105L</td><td>Survey of General, Organic, and Biochemistry</td><td>0</td></tr>
+            <tr><td>CHEM-107</td><td>Chemistry, Society and the Environment</td><td>4</td></tr>
+            <tr><td>CHEM-111</td><td>General Chemistry I</td><td>4</td></tr>
+            <tr><td>CHEM-111</td><td>General Chemistry I</td><td>4</td></tr>
+            <tr><td>CHEM-112</td><td>General Chemistry II</td><td>4</td></tr>
+            <tr><td>CHEM-112</td><td>General Chemistry II</td><td>4</td></tr>
+            <tr><td>CHEM-332</td><td>Organic Chemistry II</td><td>4</td></tr>
+            <tr><td>CHEM-332L</td><td>Organic Chemistry II Lab</td><td>1</td></tr>
+            <tr><td>CHEM-332L</td><td>Organic Chemistry II Lab</td><td>1</td></tr>
+            <tr><td>GEOL-118</td><td>Environmental Geology</td><td>4</td></tr>
+            <tr><td>LAWE-367</td><td>Exploring Forensic Science</td><td>4</td></tr>
+            <tr><td>NSCI-201</td><td>Minnesota Ecology and Conservation Biology</td><td>4</td></tr>
+            <tr><td>NSCI-201</td><td>Minnesota Ecology and Conservation Biology</td><td>4</td></tr>
+            <tr><td>NSCI-204</td><td>Environmental Science</td><td>4</td></tr>
+            <tr><td>PHYS-101</td><td>Introduction to Astronomy</td><td>4</td></tr>
+            <tr><td>PHYS-105</td><td>Air, Weather and Climate</td><td>4</td></tr>
+            <tr><td>PHYS-110</td><td>Introduction to Physics</td><td>4</td></tr>
+            <tr><td>PHYS-211</td><td>Calculus Based Physics I</td><td>5</td></tr>
+            <tr><td>PHYS-211</td><td>Calculus Based Physics I</td><td>5</td></tr>
+            <tr><td>PSYC-309</td><td>Cognitive Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-309</td><td>Cognitive Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-309</td><td>Cognitive Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-312</td><td>Research Methods</td><td>5</td></tr>
+            <tr><td>PSYC-312</td><td>Research Methods</td><td>5</td></tr>
+            <tr><td>PSYC-312</td><td>Research Methods</td><td>5</td></tr>
+            <tr><td>PSYC-312</td><td>Research Methods</td><td>5</td></tr>
+            <tr><td>PSYC-345</td><td>Biopsychology</td><td>5</td></tr>
+        </table>
+    </div>
+    <div id="goal-4" class="tabcontent">
+        <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
+        <p>To increase students' knowledge about mathematical and logical modes of thinking. This will enable students
+            to appreciate the breadth of applications of mathematics, evaluate arguments, and detect fallacious
+            reasoning. Students will learn to apply mathematics, logic, and/or statistics to help them make decisions
+            in their lives and careers. Minnesota's public higher education systems have agreed that developmental
+            mathematics includes the first three years of a high school mathematics sequence through intermediate algebra.</p>
+        <table id="goal-4-table">
+            <tr><td>MATH-110</td><td>Math for Liberal Arts</td><td>4</td></tr>
+            <tr><td>MATH-110</td><td>Math for Liberal Arts</td><td>4</td></tr>
+            <tr><td>MATH-110</td><td>Math for Liberal Arts</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra: Learning Community: TEAM: Technology</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-115</td><td>College Algebra</td><td>4</td></tr>
+            <tr><td>MATH-120</td><td>Precalculus</td><td>4</td></tr>
+            <tr><td>MATH-120</td><td>Precalculus</td><td>4</td></tr>
+            <tr><td>MATH-210</td><td>Calculus I</td><td>4</td></tr>
+            <tr><td>MATH-210</td><td>Calculus I</td><td>4</td></tr>
+            <tr><td>MATH-211</td><td>Calculus II</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-215</td><td>Discrete Mathematics</td><td>4</td></tr>
+            <tr><td>MATH-310</td><td>Calculus III: Multivariable Calculus</td><td>4</td></tr>
+            <tr><td>MATH-315</td><td>Linear Algebra and Applications</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-201</td><td>Statistics I</td><td>4</td></tr>
+            <tr><td>STAT-311</td><td>Regression Analysis</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-5" class="tabcontent">
+        <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
+        <p>To increase students' knowledge of how historians and social and behavioral scientists discover, describe,
+            and explain the behaviors and interactions among individuals, groups, institutions, events, and ideas.
+            Such knowledge will better equip students to understand themselves and the roles they play in addressing
+            the issues facing humanity.</p>
+        <table id="goal-5-table">
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-301</td><td>Approaches to Cultural Anthropology</td><td>4</td></tr>
+            <tr><td>ANTH-302</td><td>Gender and Culture</td><td>4</td></tr>
+            <tr><td>ANTH-302</td><td>Gender and Culture</td><td>4</td></tr>
+            <tr><td>ANTH-304</td><td>Anthropology of Religion</td><td>4</td></tr>
+            <tr><td>ANTH-308</td><td>Archaeology: Explaining the Past</td><td>4</td></tr>
+            <tr><td>ANTH-329</td><td>Race and Ethnicity: Sociological and Anthropological Perspectives</td><td>4</td></tr>
+            <tr><td>CJS-101</td><td>Introduction to Criminal Justice</td><td>3</td></tr>
+            <tr><td>CJS-101</td><td>Introduction to Criminal Justice</td><td>3</td></tr>
+            <tr><td>CJS-350</td><td>Citizenship: Community Involvement</td><td>4</td></tr>
+            <tr><td>CJS-350</td><td>Citizenship: Community Involvement</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>ECON-201</td><td>Macroeconomics</td><td>3</td></tr>
+            <tr><td>ECON-201</td><td>Macroeconomics</td><td>3</td></tr>
+            <tr><td>ECON-201</td><td>Macroeconomics</td><td>3</td></tr>
+            <tr><td>ECON-201</td><td>Macroeconomics</td><td>3</td></tr>
+            <tr><td>ECON-201</td><td>Macroeconomics</td><td>3</td></tr>
+            <tr><td>ECON-202</td><td>Microeconomics</td><td>3</td></tr>
+            <tr><td>ECON-202</td><td>Microeconomics</td><td>3</td></tr>
+            <tr><td>ECON-202</td><td>Microeconomics</td><td>3</td></tr>
+            <tr><td>ECON-202</td><td>Microeconomics</td><td>3</td></tr>
+            <tr><td>ECON-311</td><td>Economics of the Environment</td><td>4</td></tr>
+            <tr><td>ECON-315</td><td>Economics of Diversity</td><td>4</td></tr>
+            <tr><td>ECON-351</td><td>Intermediate Macroeconomics</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-305</td><td>Major Issues in U.S. Race Relations</td><td>4</td></tr>
+            <tr><td>ETHS-306</td><td>Politics of Mixed Racial Identity</td><td>4</td></tr>
+            <tr><td>ETHS-309</td><td>Race and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-318</td><td>Trauma and Traumascapes: Identity, Legacy, and Memory</td><td>4</td></tr>
+            <tr><td>ETHS-324</td><td>Race, Identity, and the Internet</td><td>4</td></tr>
+            <tr><td>GEOG-201</td><td>Introduction to Geography</td><td>3</td></tr>
+            <tr><td>GEOG-201</td><td>Introduction to Geography</td><td>3</td></tr>
+            <tr><td>GNDR-201</td><td>Introduction to Gender and Women's Studies</td><td>4</td></tr>
+            <tr><td>GNDR-367</td><td>Transgender Identities</td><td>4</td></tr>
+            <tr><td>GNDR-375</td><td>Intersectionality</td><td>4</td></tr>
+            <tr><td>HIST-101</td><td>The American Past: To 1865</td><td>3</td></tr>
+            <tr><td>HIST-101</td><td>The American Past: To 1865</td><td>3</td></tr>
+            <tr><td>HIST-103</td><td>World History I: Patterns of Civilization to 1500</td><td>3</td></tr>
+            <tr><td>HIST-103</td><td>World History I: Patterns of Civilization to 1500</td><td>3</td></tr>
+            <tr><td>HIST-301</td><td>Historical Interpretation</td><td>4</td></tr>
+            <tr><td>HIST-305</td><td>U.S. Economic Life: Technology</td><td>4</td></tr>
+            <tr><td>HIST-309</td><td>Women and Public Activism</td><td>4</td></tr>
+            <tr><td>HIST-312</td><td>Beginnings of American Society: Colonial and Revolutionary History</td><td>4</td></tr>
+            <tr><td>HIST-315</td><td>The Civil Rights Movement in the 1960s</td><td>4</td></tr>
+            <tr><td>HIST-336</td><td>From Roosevelt to Reagan: American History, 1932-1980</td><td>4</td></tr>
+            <tr><td>HIST-336</td><td>From Roosevelt to Reagan: American History, 1932-1980</td><td>4</td></tr>
+            <tr><td>HIST-348</td><td>U.S. Legal History: A Survey</td><td>4</td></tr>
+            <tr><td>HIST-363</td><td>World Environmental History</td><td>4</td></tr>
+            <tr><td>HIST-383</td><td>Latin America History II: 1910 to Present</td><td>4</td></tr>
+            <tr><td>HIST-391</td><td>The Crusades: Origins and Global Perspectives</td><td>4</td></tr>
+            <tr><td>HIST-394</td><td>Comparative Women's History</td><td>4</td></tr>
+            <tr><td>HSFS-338</td><td>Family: Racial, Gender and Class Dimensions</td><td>4</td></tr>
+            <tr><td>HSFS-339</td><td>Issues and Actions in Family Policy</td><td>4</td></tr>
+            <tr><td>HSFS-341</td><td>Work and Family</td><td>4</td></tr>
+            <tr><td>HSFS-343</td><td>The Family: A Social/Psychological Exploration</td><td>4</td></tr>
+            <tr><td>HSG-374</td><td>Aging in America: A Personal Challenge</td><td>4</td></tr>
+            <tr><td>HSVP-301</td><td>Violence: Individual, Community and Global Responses</td><td>4</td></tr>
+            <tr><td>LING-316</td><td>The Nature of Language</td><td>4</td></tr>
+            <tr><td>LING-326</td><td>Language and Culture</td><td>4</td></tr>
+            <tr><td>POL-101</td><td>Introduction to American Government and Politics</td><td>4</td></tr>
+            <tr><td>POL-101</td><td>Introduction to American Government and Politics</td><td>4</td></tr>
+            <tr><td>POL-301</td><td>Citizenship in a Global Context</td><td>4</td></tr>
+            <tr><td>POL-303</td><td>Ethnic Conflict in Global Perspective</td><td>4</td></tr>
+            <tr><td>POL-304</td><td>Social Movements in Global Perspective</td><td>4</td></tr>
+            <tr><td>POL-305</td><td>Elections and Political Parties</td><td>4</td></tr>
+            <tr><td>POL-321</td><td>Approaches to World Politics</td><td>4</td></tr>
+            <tr><td>POL-331</td><td>Law and the Legal Process</td><td>4</td></tr>
+            <tr><td>POL-381</td><td>Community Leadership: Principles and Approaches</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-100</td><td>General Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-300</td><td>Abnormal Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-300</td><td>Abnormal Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-300</td><td>Abnormal Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-301</td><td>Adolescent Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-302</td><td>Adult Development and Lifelong Learning</td><td>4</td></tr>
+            <tr><td>PSYC-305</td><td>Behavior Disorders in Children</td><td>4</td></tr>
+            <tr><td>PSYC-306</td><td>Child Abuse</td><td>4</td></tr>
+            <tr><td>PSYC-307</td><td>Data/Statistical Analysis for the Behavioral Sciences</td><td>4</td></tr>
+            <tr><td>PSYC-308</td><td>Child Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-308</td><td>Child Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-308</td><td>Child Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-311</td><td>Life Span Developmental Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-311</td><td>Life Span Developmental Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-311</td><td>Life Span Developmental Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-313</td><td>Family Systems</td><td>4</td></tr>
+            <tr><td>PSYC-317</td><td>Human Factors</td><td>4</td></tr>
+            <tr><td>PSYC-323</td><td>The Nature of Creativity: A Psychological Perspective</td><td>4</td></tr>
+            <tr><td>PSYC-327</td><td>Psychological Testing</td><td>4</td></tr>
+            <tr><td>PSYC-328</td><td>Psychology of African Americans</td><td>4</td></tr>
+            <tr><td>PSYC-330</td><td>Psychology of Learning: Contemporary Theories and Applications</td><td>4</td></tr>
+            <tr><td>PSYC-331</td><td>Psychology of Men</td><td>4</td></tr>
+            <tr><td>PSYC-332</td><td>Psychology of Personality</td><td>4</td></tr>
+            <tr><td>PSYC-333</td><td>Psychology of Victims</td><td>4</td></tr>
+            <tr><td>PSYC-336</td><td>Social Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-336</td><td>Social Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-337</td><td>Sports Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-340</td><td>Understanding Death and Dying</td><td>4</td></tr>
+            <tr><td>PSYC-343</td><td>Drugs and Behavior: An Introduction to Behavioral Pharmacology</td><td>4</td></tr>
+            <tr><td>PSYC-344</td><td>Industrial-Organizational Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-346</td><td>Health Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-353</td><td>Topics in Early Childhood: Raising Children in the Digital Age</td><td>2</td></tr>
+            <tr><td>PSYC-356</td><td>Early Childhood Development within a Social/Cultural and Historical Context</td><td>3</td></tr>
+            <tr><td>PSYC-357</td><td>Observing and Assessing Young Children: Birth Through Age Five</td><td>3</td></tr>
+            <tr><td>PSYC-360</td><td>Update on Adult Psychiatirc Medications: What Therapists Need to Know</td><td>0.5</td></tr>
+            <tr><td>PSYC-360</td><td>Perplexing Problems in Psychological Practice: Decision Sci/Ethics/Risk Mgt</td><td>1</td></tr>
+            <tr><td>PSYC-360</td><td>MN Psychology Multicultural Summit: Difficult/Courageous Conversations</td><td>1</td></tr>
+            <tr><td>PSYC-360</td><td>Cognitive Behavioral Therapy for InsomniaÃ‚Â¿Skills/Knowledge Clinicians Need</td><td>0.5</td></tr>
+            <tr><td>PSYC-360</td><td>Navigating Gender Dysphoria and Gender Diversity in a Therapeutic Setting</td><td>0.5</td></tr>
+            <tr><td>PSYC-363</td><td>Community Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-367</td><td>Human Sexuality</td><td>4</td></tr>
+            <tr><td>PSYC-367</td><td>Human Sexuality</td><td>4</td></tr>
+            <tr><td>PSYC-368</td><td>Psychology of the LGBTQ Community</td><td>4</td></tr>
+            <tr><td>PSYC-370</td><td>Political Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-381</td><td>The American Male</td><td>4</td></tr>
+            <tr><td>PSYC-385</td><td>Educational Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-387</td><td>Environmental Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-392</td><td>Psychology and Education of the Gifted</td><td>4</td></tr>
+            <tr><td>PSYC-395</td><td>Coaching Psychology</td><td>4</td></tr>
+            <tr><td>PSYC-397</td><td>Developmental Disabilities: Issues, Concepts and Problem Solving</td><td>4</td></tr>
+            <tr><td>PSYC-399</td><td>Applied Psychology Research Internship</td><td></td></tr>
+            <tr><td>SOC-101</td><td>Introduction to Sociology</td><td>3</td></tr>
+            <tr><td>SOC-101</td><td>Introduction to Sociology</td><td>3</td></tr>
+            <tr><td>SOC-301</td><td>Contemporary Sociology</td><td>4</td></tr>
+            <tr><td>SOC-302</td><td>Interpersonal and Social Power: A View from Below</td><td>4</td></tr>
+            <tr><td>SOC-303</td><td>Ethnic Conflict in Global Perspective</td><td>4</td></tr>
+            <tr><td>SOC-304</td><td>Social Movements in Global Perspective</td><td>4</td></tr>
+            <tr><td>SOC-306</td><td>Deviance and Social Control</td><td>4</td></tr>
+            <tr><td>SOC-309</td><td>Homelessness: Critical Issues for Policy and Practice</td><td>4</td></tr>
+            <tr><td>SOC-329</td><td>Race and Ethnicity: Sociological and Anthropological Perspectives</td><td>4</td></tr>
+            <tr><td>SOC-381</td><td>Community Leadership: Principles and Approaches</td><td>4</td></tr>
+            <tr><td>SSCI-311</td><td>Research Methods in Social Science</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-6" class="tabcontent">
+        <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
+        <p>To expand students' knowledge of the human condition and human cultures, especially in relation to behavior,
+            ideas, and values expressed in works of human imagination and thought. Through study in disciplines such as
+            literature, philosophy, and the fine arts, students will engage in critical analysis, form aesthetic judgments,
+            and develop an appreciation of the arts and humanities as fundamental to the health and survival of any
+            society. Students should have experiences in both the arts and humanities.</p>
+        <table id="goal-6-table">
+            <tr><td>ARTS-106</td><td>Introduction to Drawing</td><td>4</td></tr>
+            <tr><td>ARTS-106</td><td>Introduction to Drawing</td><td>4</td></tr>
+            <tr><td>ARTS-115</td><td>Introduction to Photography</td><td>4</td></tr>
+            <tr><td>ARTS-203</td><td>Introduction to Digital Arts</td><td>4</td></tr>
+            <tr><td>ARTS-203</td><td>Introduction to Digital Arts</td><td>4</td></tr>
+            <tr><td>ARTS-301</td><td>Current Topics: Alternative Photo Processes</td><td>2</td></tr>
+            <tr><td>ARTS-301</td><td>Current Topics: Sculptural Techniques</td><td>2</td></tr>
+            <tr><td>ARTS-302</td><td>Exhibition Practices</td><td>2</td></tr>
+            <tr><td>ARTS-306</td><td>Intermediate Drawing</td><td>4</td></tr>
+            <tr><td>ARTS-307</td><td>Intermediate Painting</td><td>4</td></tr>
+            <tr><td>ARTS-319</td><td>Topics in Printmaking: Relief</td><td>4</td></tr>
+            <tr><td>ARTS-320</td><td>Topics in Clay: Wheel-Throwing</td><td>3</td></tr>
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>COMM-200</td><td>Creating Change through Communication, Writing and the Arts</td><td>4</td></tr>
+            <tr><td>ETHS-100</td><td>Introduction to Ethnic Studies</td><td>4</td></tr>
+            <tr><td>ETHS-200</td><td>Theories of Race, Ethnicity and Culture</td><td>4</td></tr>
+            <tr><td>ETHS-200</td><td>Theories of Race, Ethnicity and Culture</td><td>4</td></tr>
+            <tr><td>ETHS-250</td><td>Latino/Hispanic Cultural Competency: Introductory Concepts</td><td>4</td></tr>
+            <tr><td>ETHS-302</td><td>Immigrant Communities and the Trajectories of Othering</td><td>4</td></tr>
+            <tr><td>ETHS-311</td><td>Understanding Racial and Ethnic Groups in the United States</td><td>4</td></tr>
+            <tr><td>ETHS-311</td><td>Understanding Racial and Ethnic Groups in the United States</td><td>4</td></tr>
+            <tr><td>GNDR-270</td><td>Gender, Race and Popular Culture</td><td>3</td></tr>
+            <tr><td>GNDR-365</td><td>The Cultural Politics of LGBT Sexuality</td><td>4</td></tr>
+            <tr><td>HUM-101</td><td>The World of Ideas: Ancient and Medieval</td><td>4</td></tr>
+            <tr><td>HUM-309</td><td>Ancient and Medieval Monsters</td><td>4</td></tr>
+            <tr><td>HUM-316</td><td>Romanticism</td><td>4</td></tr>
+            <tr><td>HUM-364</td><td>The Harlem Renaissance</td><td>4</td></tr>
+            <tr><td>HUM-364</td><td>The Harlem Renaissance</td><td>4</td></tr>
+            <tr><td>IDST-370</td><td>Cinema, Self and Other</td><td>4</td></tr>
+            <tr><td>LIT-100</td><td>Introduction to Literature</td><td>3</td></tr>
+            <tr><td>LIT-100</td><td>Introduction to Literature: Learning Community TRIO</td><td>3</td></tr>
+            <tr><td>LIT-312</td><td>Women Writers</td><td>4</td></tr>
+            <tr><td>LIT-315</td><td>Gender and Race in Literature and Film</td><td>4</td></tr>
+            <tr><td>LIT-332</td><td>Adolescent Literatures</td><td>4</td></tr>
+            <tr><td>LIT-341</td><td>American Literature: Beginnings-1870</td><td>4</td></tr>
+            <tr><td>LIT-349</td><td>American Nature Writers</td><td>4</td></tr>
+            <tr><td>LIT-349</td><td>American Nature Writers</td><td>4</td></tr>
+            <tr><td>LIT-361</td><td>African-American Literature</td><td>4</td></tr>
+            <tr><td>LIT-362</td><td>Black Women Writers</td><td>4</td></tr>
+            <tr><td>LIT-364</td><td>Literature by Immigrants of Color</td><td>4</td></tr>
+            <tr><td>LIT-371</td><td>English Literature: Beginnings-1800</td><td>4</td></tr>
+            <tr><td>LIT-377</td><td>Shakespeare</td><td>4</td></tr>
+            <tr><td>MDST-370</td><td>Contemporary Cinema</td><td>4</td></tr>
+            <tr><td>MUSC-133</td><td>Class Guitar I</td><td>4</td></tr>
+            <tr><td>PHIL-100</td><td>Multicultural Introduction to Philosophy</td><td>4</td></tr>
+            <tr><td>PHIL-100</td><td>Multicultural Introduction to Philosophy</td><td>4</td></tr>
+            <tr><td>PHIL-102</td><td>Philosophy, Film and the Meaning of Life</td><td>4</td></tr>
+            <tr><td>PHIL-301</td><td>Ethical Inquiry</td><td>4</td></tr>
+            <tr><td>PHIL-301</td><td>Ethical Inquiry</td><td>4</td></tr>
+            <tr><td>PHIL-306</td><td>Philosophy and Sexuality</td><td>4</td></tr>
+            <tr><td>PHIL-310</td><td>Environmental Philosophy</td><td>4</td></tr>
+            <tr><td>PHIL-310</td><td>Environmental Philosophy</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-327</td><td>Ethics in the Information Age</td><td>4</td></tr>
+            <tr><td>PHIL-366</td><td>Race and Racism: Philosophical Problems</td><td>4</td></tr>
+            <tr><td>PHIL-366</td><td>Race and Racism: Philosophical Problems</td><td>4</td></tr>
+            <tr><td>PHIL-378</td><td>Contemporary Epistemology and Metaphysics</td><td>4</td></tr>
+            <tr><td>RELS-301</td><td>Introduction to Religious Studies</td><td>4</td></tr>
+            <tr><td>RELS-304</td><td>Introduction to World Religions</td><td>4</td></tr>
+            <tr><td>RELS-306</td><td>The Spiritual Journey</td><td>4</td></tr>
+            <tr><td>RELS-306</td><td>The Spiritual Journey</td><td>4</td></tr>
+            <tr><td>RELS-308</td><td>World of Islam</td><td>4</td></tr>
+            <tr><td>RELS-312</td><td>Religious Traditions of China</td><td>4</td></tr>
+            <tr><td>SCRW-313</td><td>Beginning Screenwriting</td><td>4</td></tr>
+            <tr><td>SCRW-383</td><td>Writing For Video Games</td><td>4</td></tr>
+            <tr><td>SOC-101</td><td>Introduction to Sociology</td><td>3</td></tr>
+            <tr><td>THEA-321</td><td>Directed Readings in Theater</td><td>4</td></tr>
+            <tr><td>THEA-351</td><td>Production and Performance Laboratory</td><td></td></tr>
+            <tr><td>WRIT-251</td><td>Introduction to Creative Writing</td><td>3</td></tr>
+            <tr><td>WRIT-251</td><td>Introduction to Creative Writing</td><td>3</td></tr>
+            <tr><td>WRIT-300</td><td>Creative Writers, Identity and Race in the Twin Cities</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-7" class="tabcontent">
+        <h3><u>Goal 7: Human Diversity</u></h3>
+        <p>To increase students' understanding of individual and group differences (e.g. race, gender, class) and their
+            knowledge of the traditions and values of various groups in the United States. Students should be able to
+            evaluate the United States' historical and contemporary responses to group differences.</p>
+        <table id="goal-7-table">
+            <tr><td>ANTH-329</td><td>Race and Ethnicity: Sociological and Anthropological Perspectives</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-360</td><td>Diversity in Criminal Justice</td><td>4</td></tr>
+            <tr><td>COMM-233</td><td>Introduction to Intercultural Communication</td><td>3</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>COMM-372</td><td>Health Communication</td><td>4</td></tr>
+            <tr><td>ECON-315</td><td>Economics of Diversity</td><td>4</td></tr>
+            <tr><td>EDU-451</td><td>Immigrants and Refugees in Urban Schools</td><td>3</td></tr>
+            <tr><td>ETHS-100</td><td>Introduction to Ethnic Studies</td><td>4</td></tr>
+            <tr><td>ETHS-200</td><td>Theories of Race, Ethnicity and Culture</td><td>4</td></tr>
+            <tr><td>ETHS-200</td><td>Theories of Race, Ethnicity and Culture</td><td>4</td></tr>
+            <tr><td>ETHS-232</td><td>American Indians in Minnesota</td><td>2</td></tr>
+            <tr><td>ETHS-244</td><td>African Americans in Minnesota</td><td>2</td></tr>
+            <tr><td>ETHS-250</td><td>Latino/Hispanic Cultural Competency: Introductory Concepts</td><td>4</td></tr>
+            <tr><td>ETHS-302</td><td>Immigrant Communities and the Trajectories of Othering</td><td>4</td></tr>
+            <tr><td>ETHS-306</td><td>Politics of Mixed Racial Identity</td><td>4</td></tr>
+            <tr><td>ETHS-311</td><td>Understanding Racial and Ethnic Groups in the United States</td><td>4</td></tr>
+            <tr><td>ETHS-311</td><td>Understanding Racial and Ethnic Groups in the United States</td><td>4</td></tr>
+            <tr><td>ETHS-315</td><td>Color of Incarceration</td><td>4</td></tr>
+            <tr><td>ETHS-318</td><td>Trauma and Traumascapes: Identity, Legacy, and Memory</td><td>4</td></tr>
+            <tr><td>ETHS-324</td><td>Race, Identity, and the Internet</td><td>4</td></tr>
+            <tr><td>ETHS-370</td><td>Black Thought</td><td>4</td></tr>
+            <tr><td>GNDR-201</td><td>Introduction to Gender and Women's Studies</td><td>4</td></tr>
+            <tr><td>GNDR-270</td><td>Gender, Race and Popular Culture</td><td>3</td></tr>
+            <tr><td>GNDR-365</td><td>The Cultural Politics of LGBT Sexuality</td><td>4</td></tr>
+            <tr><td>GNDR-367</td><td>Transgender Identities</td><td>4</td></tr>
+            <tr><td>GNDR-375</td><td>Intersectionality</td><td>4</td></tr>
+            <tr><td>HIST-312</td><td>Beginnings of American Society: Colonial and Revolutionary History</td><td>4</td></tr>
+            <tr><td>HIST-315</td><td>The Civil Rights Movement in the 1960s</td><td>4</td></tr>
+            <tr><td>HIST-336</td><td>From Roosevelt to Reagan: American History, 1932-1980</td><td>4</td></tr>
+            <tr><td>HIST-336</td><td>From Roosevelt to Reagan: American History, 1932-1980</td><td>4</td></tr>
+            <tr><td>HRM-335</td><td>Understanding and Addressing Race in the Workplace</td><td>4</td></tr>
+            <tr><td>HSFS-341</td><td>Work and Family</td><td>4</td></tr>
+            <tr><td>HUM-364</td><td>The Harlem Renaissance</td><td>4</td></tr>
+            <tr><td>HUM-364</td><td>The Harlem Renaissance</td><td>4</td></tr>
+            <tr><td>IDST-370</td><td>Cinema, Self and Other</td><td>4</td></tr>
+            <tr><td>LIT-312</td><td>Women Writers</td><td>4</td></tr>
+            <tr><td>LIT-361</td><td>African-American Literature</td><td>4</td></tr>
+            <tr><td>LIT-362</td><td>Black Women Writers</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>MGMT-360</td><td>Managing a Diverse Workforce</td><td>4</td></tr>
+            <tr><td>PHIL-306</td><td>Philosophy and Sexuality</td><td>4</td></tr>
+            <tr><td>PHIL-366</td><td>Race and Racism: Philosophical Problems</td><td>4</td></tr>
+            <tr><td>PHIL-366</td><td>Race and Racism: Philosophical Problems</td><td>4</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-212</td><td>Introduction to Diversity and Ethics in Psychology</td><td>3</td></tr>
+            <tr><td>PSYC-328</td><td>Psychology of African Americans</td><td>4</td></tr>
+            <tr><td>PSYC-356</td><td>Early Childhood Development within a Social/Cultural and Historical Context</td><td>3</td></tr>
+            <tr><td>PSYC-368</td><td>Psychology of the LGBTQ Community</td><td>4</td></tr>
+            <tr><td>RELS-306</td><td>The Spiritual Journey</td><td>4</td></tr>
+            <tr><td>RELS-306</td><td>The Spiritual Journey</td><td>4</td></tr>
+            <tr><td>SOC-101</td><td>Introduction to Sociology</td><td>3</td></tr>
+            <tr><td>SOC-101</td><td>Introduction to Sociology</td><td>3</td></tr>
+            <tr><td>SOC-301</td><td>Contemporary Sociology</td><td>4</td></tr>
+            <tr><td>SOC-306</td><td>Deviance and Social Control</td><td>4</td></tr>
+            <tr><td>SOC-329</td><td>Race and Ethnicity: Sociological and Anthropological Perspectives</td><td>4</td></tr>
+            <tr><td>SSCI-100</td><td>Intro to Social Science: Learning Community: Connect. Explore. Decide.</td><td>4</td></tr>
+            <tr><td>WRIT-300</td><td>Creative Writers, Identity and Race in the Twin Cities</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-8" class="tabcontent">
+        <h3><u>Goal 8: Global Perspective</u></h3>
+        <p>To increase students' understanding of the growing interdependence of nations and peoples and develop their
+            ability to apply a comparative perspective to cross-cultural social, economic and political experiences.</p>
+        <table id="goal-8-table">
+            <tr><td>ANTH-301</td><td>Approaches to Cultural Anthropology</td><td>4</td></tr>
+            <tr><td>ANTH-302</td><td>Gender and Culture</td><td>4</td></tr>
+            <tr><td>ANTH-302</td><td>Gender and Culture</td><td>4</td></tr>
+            <tr><td>ANTH-304</td><td>Anthropology of Religion</td><td>4</td></tr>
+            <tr><td>COMM-333</td><td>Intermediate Intercultural Communication</td><td>4</td></tr>
+            <tr><td>COMM-333</td><td>Intermediate Intercultural Communication</td><td>4</td></tr>
+            <tr><td>COMM-333</td><td>Intermediate Intercultural Communication</td><td>4</td></tr>
+            <tr><td>COMM-333</td><td>Intermediate Intercultural Communication</td><td>4</td></tr>
+            <tr><td>COMM-333</td><td>Intermediate Intercultural Communication</td><td>4</td></tr>
+            <tr><td>HIST-394</td><td>Comparative Women's History</td><td>4</td></tr>
+            <tr><td>HSCI-309</td><td>Global Health Issues</td><td>3</td></tr>
+            <tr><td>HSCI-309</td><td>Global Health Issues</td><td>3</td></tr>
+            <tr><td>HUM-316</td><td>Romanticism</td><td>4</td></tr>
+            <tr><td>IBUS-311</td><td>International Business Environment and Operations</td><td>4</td></tr>
+            <tr><td>IBUS-311</td><td>International Business Environment and Operations</td><td>4</td></tr>
+            <tr><td>LING-316</td><td>The Nature of Language</td><td>4</td></tr>
+            <tr><td>LING-326</td><td>Language and Culture</td><td>4</td></tr>
+            <tr><td>LIT-364</td><td>Literature by Immigrants of Color</td><td>4</td></tr>
+            <tr><td>MKTG-480</td><td>International Marketing</td><td>4</td></tr>
+            <tr><td>POL-303</td><td>Ethnic Conflict in Global Perspective</td><td>4</td></tr>
+            <tr><td>POL-304</td><td>Social Movements in Global Perspective</td><td>4</td></tr>
+            <tr><td>POL-321</td><td>Approaches to World Politics</td><td>4</td></tr>
+            <tr><td>RELS-304</td><td>Introduction to World Religions</td><td>4</td></tr>
+            <tr><td>RELS-308</td><td>World of Islam</td><td>4</td></tr>
+            <tr><td>RELS-312</td><td>Religious Traditions of China</td><td>4</td></tr>
+            <tr><td>SOC-303</td><td>Ethnic Conflict in Global Perspective</td><td>4</td></tr>
+            <tr><td>SOC-304</td><td>Social Movements in Global Perspective</td><td>4</td></tr>
+            <tr><td>SPAN-101</td><td>Beginning Spanish I</td><td>4</td></tr>
+            <tr><td>SPAN-101</td><td>Beginning Spanish I</td><td>4</td></tr>
+            <tr><td>SPAN-102</td><td>Beginning Spanish II</td><td>4</td></tr>
+            <tr><td>SPAN-201</td><td>Intermediate Spanish I</td><td>4</td></tr>
+            <tr><td>SPAN-202</td><td>Intermediate Spanish II</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-9" class="tabcontent">
+        <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
+        <p>To develop students' capacity to identify, discuss, and reflect upon the ethical dimensions of political,
+            social, and personal life and to understand the ways in which they can exercise responsible and productive
+            citizenship. While there are diverse views of social justice or the common good in a pluralistic society,
+            students should learn that responsible citizenship requires them to develop skills to understand their own
+            and others' positions, be part of the free exchange of ideas, and function as public-minded citizens.</p>
+        <table id="goal-9-table">
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>CJS-375</td><td>Ethics and Professionalism in Criminal Justice</td><td>4</td></tr>
+            <tr><td>COMM-200</td><td>Creating Change through Communication, Writing and the Arts</td><td>4</td></tr>
+            <tr><td>COMM-320</td><td>Individual Rights and Public Discourse</td><td>4</td></tr>
+            <tr><td>ETHS-309</td><td>Race and Public Policy</td><td>4</td></tr>
+            <tr><td>HIST-309</td><td>Women and Public Activism</td><td>4</td></tr>
+            <tr><td>HIST-348</td><td>U.S. Legal History: A Survey</td><td>4</td></tr>
+            <tr><td>IDST-310</td><td>Principles of Civic Engagement</td><td>4</td></tr>
+            <tr><td>PHIL-102</td><td>Philosophy, Film and the Meaning of Life</td><td>4</td></tr>
+            <tr><td>PHIL-301</td><td>Ethical Inquiry</td><td>4</td></tr>
+            <tr><td>PHIL-301</td><td>Ethical Inquiry</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-320</td><td>Business Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-321</td><td>Medical Ethics</td><td>4</td></tr>
+            <tr><td>PHIL-327</td><td>Ethics in the Information Age</td><td>4</td></tr>
+            <tr><td>POL-101</td><td>Introduction to American Government and Politics</td><td>4</td></tr>
+            <tr><td>POL-101</td><td>Introduction to American Government and Politics</td><td>4</td></tr>
+            <tr><td>POL-301</td><td>Citizenship in a Global Context</td><td>4</td></tr>
+            <tr><td>POL-305</td><td>Elections and Political Parties</td><td>4</td></tr>
+            <tr><td>POL-381</td><td>Community Leadership: Principles and Approaches</td><td>4</td></tr>
+            <tr><td>PSYC-370</td><td>Political Psychology</td><td>4</td></tr>
+            <tr><td>SOC-302</td><td>Interpersonal and Social Power: A View from Below</td><td>4</td></tr>
+            <tr><td>SOC-309</td><td>Homelessness: Critical Issues for Policy and Practice</td><td>4</td></tr>
+            <tr><td>SOC-381</td><td>Community Leadership: Principles and Approaches</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="goal-10" class="tabcontent">
+        <h3><u>Goal 10: People and the Environment</u></h3>
+        <p>To improve students' understanding of today's complex environmental challenges. Students will examine the
+            inter-relatedness of human society and the natural environment. Knowledge of both bio-physical principles
+            and socio-cultural systems is the foundation for integrative and critical thinking about environmental issues.</p>
+        <table id="goal-10-table">
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-101</td><td>Human Origins</td><td>3</td></tr>
+            <tr><td>ANTH-308</td><td>Archaeology: Explaining the Past</td><td>4</td></tr>
+            <tr><td>BIOL-320</td><td>Ecosystem and Global Ecology</td><td>5</td></tr>
+            <tr><td>BIOL-415</td><td>Pollution Ecology</td><td>3</td></tr>
+            <tr><td>CHEM-107</td><td>Chemistry, Society and the Environment</td><td>4</td></tr>
+            <tr><td>ECON-311</td><td>Economics of the Environment</td><td>4</td></tr>
+            <tr><td>ESCI-320</td><td>Ecosystem and Global Ecology</td><td>5</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>ETHS-304</td><td>Environmental Justice and Public Policy</td><td>4</td></tr>
+            <tr><td>GEOG-201</td><td>Introduction to Geography</td><td>3</td></tr>
+            <tr><td>GEOG-201</td><td>Introduction to Geography</td><td>3</td></tr>
+            <tr><td>GEOL-118</td><td>Environmental Geology</td><td>4</td></tr>
+            <tr><td>GEOL-314</td><td>Earth Surface Environments</td><td>5</td></tr>
+            <tr><td>HIST-363</td><td>World Environmental History</td><td>4</td></tr>
+            <tr><td>LIT-349</td><td>American Nature Writers</td><td>4</td></tr>
+            <tr><td>LIT-349</td><td>American Nature Writers</td><td>4</td></tr>
+            <tr><td>NSCI-201</td><td>Minnesota Ecology and Conservation Biology</td><td>4</td></tr>
+            <tr><td>NSCI-201</td><td>Minnesota Ecology and Conservation Biology</td><td>4</td></tr>
+            <tr><td>NSCI-204</td><td>Environmental Science</td><td>4</td></tr>
+            <tr><td>PHIL-310</td><td>Environmental Philosophy</td><td>4</td></tr>
+            <tr><td>PHIL-310</td><td>Environmental Philosophy</td><td>4</td></tr>
+            <tr><td>PHYS-105</td><td>Air, Weather and Climate</td><td>4</td></tr>
+            <tr><td>PSYC-387</td><td>Environmental Psychology</td><td>4</td></tr>
+            <tr><td>WRIT-375</td><td>Environmental Communication</td><td>4</td></tr>
+        </table>
+    </div>
+    <div id="electives" class="tabcontent">
+        <h3><u>Electives</u></h3>
+        <table id="electives-table">
+        </table>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
