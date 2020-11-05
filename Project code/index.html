@@ -9,7 +9,7 @@
     <p><input type="text" id="course-search" placeholder="Search for your major here"><button type="submit" id="search-major">Search</button><button type="button" id="clear-search">Clear search</button> </p>
     <p><select id="course-dropdown">
         <option selected="selected">Select your major below</option>
-        <option id="accounting-bs">Accounting BS</option>
+        <option id="accounting-bs" value="accounting-bs">Accounting BS</option>
         <option id="adult-basic-education-certificate">Adult Basic Education Certificate</option>
         <option id="advanced-dental-therapy-msadt">Advanced Dental Therapy MSADT</option>
         <option id="advertising-minor">Advertising Minor</option>
@@ -43,7 +43,7 @@
         <option id="computer-forensics-minor">Computer Forensics Minor</option>
         <option id="computer-forensics-post-baccalaureate-ucert">Computer Forensics Post-baccalaureate UCERT</option>
         <option id="computer-information-technology-bs">Computer Information Technology BS</option>
-        <option id="computer-science-bs">Computer Science BS</option>
+        <option id="computer-science-bs" value="computer-science-bs">Computer Science BS</option>
         <option id="computer-science-ms">Computer Science MS</option>
         <option id="computer-science-psm">Computer Science PSM</option>
         <option id="creative-writing-ba">Creative Writing BA</option>
@@ -52,7 +52,7 @@
         <option id="criminal-justice-minor">Criminal Justice Minor</option>
         <option id="criminal-justice-ms">Criminal Justice MS</option>
         <option id="cyber-operations-ms">Cyber Operations MS</option>
-        <option id="cybersecurity--post-baccalaureate-ucert">Cybersecurity  Post-baccalaureate UCERT</option>
+        <option id="cybersecurity-post-baccalaureate-ucert">Cybersecurity Post-baccalaureate UCERT</option>
         <option id="cybersecurity-bs">Cybersecurity BS</option>
         <option id="cybersecurity-minor">Cybersecurity Minor</option>
         <option id="data-science-bs">Data Science BS</option>
@@ -63,7 +63,7 @@
         <option id="digital-media-minor">Digital Media Minor</option>
         <option id="disability-studies-minor">Disability Studies Minor</option>
         <option id="early-childhood-studies-bas">Early Childhood Studies BAS</option>
-        <option id="economics-bs">Economics BS</option>
+        <option id="economics-bs" value="economics-bs">Economics BS</option>
         <option id="economics-minor">Economics Minor</option>
         <option id="educational-psychology-minor">Educational Psychology Minor</option>
         <option id="electronic-discovery-minor">Electronic Discovery Minor</option>
@@ -204,12 +204,34 @@
         </table>
     </div>
     <div id="liberal-studies" class="tabcontent">
-        <h3><u>Liberal Studies</u></h3>
+        <h3><u>Liberal Studies: 8 credits</u></h3>
         <table id="liberal-studies-table">
+            <tr><td>BIOL-310</td><td>Ecology</td><td>5</td></tr>
+            <tr><td>BIOL-312</td><td>Evolution</td><td>5</td></tr>
+            <tr><td>ECON-420</td><td>Money, Banking and Financial Institutions</td><td>4</td></tr>
+            <tr><td>INFS-315</td><td>Searching for Information</td><td>4</td></tr>
+            <tr><td>MATH-471</td><td>Abstract Algebra</td><td>4</td></tr>
+            <tr><td>PRSP-301</td><td>Perspectives: Educational Philosophy and Planning</td><td>4</td></tr>
+            <tr><td>SCRW-314</td><td>New Screenplay Forms</td><td>4</td></tr>
+            <tr><td>SCRW-315</td><td>Film Production and Editing I</td><td>4</td></tr>
+            <tr><td>SCRW-416</td><td>Projects in Screenwriting</td><td>4</td></tr>
+            <tr><td>WRIT-301</td><td>Professional and Technical Writing Careers</td><td>2</td></tr>
+            <tr><td>WRIT-331</td><td>Writing in Your Major: Focus on Nursing</td><td>4</td></tr>
+            <tr><td>WRIT-344</td><td>Writing for Publication and Profit</td><td>4</td></tr>
+            <tr><td>WRIT-353</td><td>Writing Short Fiction</td><td>4</td></tr>
+            <tr><td>WRIT-355</td><td>Writing Children's Literature</td><td>4</td></tr>
+            <tr><td>WRIT-357</td><td>Writers as Readers</td><td>4</td></tr>
+            <tr><td>WRIT-358</td><td>1000 Words or Less</td><td>4</td></tr>
+            <tr><td>WRIT-371</td><td>Editing</td><td>4</td></tr>
+            <tr><td>WRIT-373</td><td>Writing and Designing for the Web I</td><td>4</td></tr>
+            <tr><td>WRIT-375</td><td>Environmental Communication</td><td>4</td></tr>
+            <tr><td>WRIT-532</td><td>Writing about Place</td><td>4</td></tr>
+            <tr><td>WRIT-574</td><td>Usability and User Experience</td><td>4</td></tr>
+            <tr><td>WRIT-583</td><td>Writing Major Projects</td><td>4</td></tr>
         </table>
     </div>
     <div id="rigr" class="tabcontent">
-        <h3><u>Racial Issues Graduation Requirement</u></h3>
+        <h3><u>Racial Issues Graduation Requirement: 3 credits</u></h3>
         <p>All new or readmitted undergraduate students admitted fall 2016 or later must complete an approved learning
             experience (at least 3 credits) with a significant focus on race and racism to graduate with a bachelor's
             degree from the university.  Upon review, an approved prior learning, independent study, theory seminar or
@@ -241,14 +263,28 @@
         </table>
     </div>
     <div id="goal-1" class="tabcontent">
-        <h3><u>Goal 1: Communication</u></h3>
+        <h3><u>Goal 1: Communication 6 credits</u></h3>
         <p>To develop writers and speakers who use the English language effectively and who read, write, speak and
             listen critically. As a base, all students should complete introductory communication requirements early
             in their collegiate studies. Writing competency is an ongoing process to be reinforced through
             writing-intensive courses and writing across the curriculum. Speaking and listening skills need
             reinforcement through multiple opportunities for interpersonal communication, public speaking,
             and discussion.</p>
-        <table id="goal-1-table">
+        <h5>One course required</h5>
+        <table id="goal-1-part-1-table">
+            <tr><td>WRIT-121</td><td>Writing I Intensive: Learning Community</td><td>5</td></tr>
+            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
+            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
+        </table>
+        <h5>One course required</h5>
+        <table id="goal-1-part-2-table">
             <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
             <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
             <tr><td>COMM-103</td><td>Public Speaking</td><td>3</td></tr>
@@ -270,16 +306,6 @@
             <tr><td>RDNG-112</td><td>The Educated Reader: Analytical Reading</td><td>4</td></tr>
             <tr><td>THEA-331</td><td>Voice: Speaking from Experience</td><td>4</td></tr>
             <tr><td>THEA-345</td><td>Acting III</td><td>4</td></tr>
-            <tr><td>WRIT-121</td><td>Writing I Intensive: Learning Community</td><td>5</td></tr>
-            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
-            <tr><td>WRIT-121</td><td>Writing I Intensive</td><td>5</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
-            <tr><td>WRIT-131</td><td>Writing I</td><td>3</td></tr>
             <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
             <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
             <tr><td>WRIT-231</td><td>Writing II</td><td>3</td></tr>
@@ -308,11 +334,10 @@
             students' awareness of their own thinking and problem-solving procedures. To integrate new skills into
             their customary ways of thinking, students must be actively engaged in practicing thinking skills and
             applying them to open-ended problems.</p>
-        <table id="goal-2-table">
-        </table>
+        <h3>Students who complete the university’s general education requirements will have met this goal</h3>
     </div>
     <div id="goal-3" class="tabcontent">
-        <h3><u>Goal 3: Natural Sciences</u></h3>
+        <h3><u>Goal 3: Natural Sciences 7 credits + a laboratory</u></h3>
         <p>To improve students' understanding of natural science principles and of the methods of scientific inquiry,
             i.e., the ways in which scientists investigate natural science phenomena. As a basis for lifelong learning,
             students need to know the vocabulary of science and to realize that while a set of principles has been
@@ -368,7 +393,7 @@
         </table>
     </div>
     <div id="goal-4" class="tabcontent">
-        <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
+        <h3><u>Goal 4: Mathmatics or Logical Reasoning 3 credits</u></h3>
         <p>To increase students' knowledge about mathematical and logical modes of thinking. This will enable students
             to appreciate the breadth of applications of mathematics, evaluate arguments, and detect fallacious
             reasoning. Students will learn to apply mathematics, logic, and/or statistics to help them make decisions
@@ -415,7 +440,7 @@
         </table>
     </div>
     <div id="goal-5" class="tabcontent">
-        <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
+        <h3><u>Goal 5: History and the Social and Behavioral Sciences 6 credits from two disciplines</u></h3>
         <p>To increase students' knowledge of how historians and social and behavioral scientists discover, describe,
             and explain the behaviors and interactions among individuals, groups, institutions, events, and ideas.
             Such knowledge will better equip students to understand themselves and the roles they play in addressing
@@ -577,7 +602,7 @@
         </table>
     </div>
     <div id="goal-6" class="tabcontent">
-        <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
+        <h3><u>Goal 6: The Humanities and the Fine Arts 6 credits from two disciplines</u></h3>
         <p>To expand students' knowledge of the human condition and human cultures, especially in relation to behavior,
             ideas, and values expressed in works of human imagination and thought. Through study in disciplines such as
             literature, philosophy, and the fine arts, students will engage in critical analysis, form aesthetic judgments,
@@ -669,7 +694,7 @@
         </table>
     </div>
     <div id="goal-7" class="tabcontent">
-        <h3><u>Goal 7: Human Diversity</u></h3>
+        <h3><u>Goal 7: Human Diversity 3 credits</u></h3>
         <p>To increase students' understanding of individual and group differences (e.g. race, gender, class) and their
             knowledge of the traditions and values of various groups in the United States. Students should be able to
             evaluate the United States' historical and contemporary responses to group differences.</p>
@@ -750,7 +775,7 @@
         </table>
     </div>
     <div id="goal-8" class="tabcontent">
-        <h3><u>Goal 8: Global Perspective</u></h3>
+        <h3><u>Goal 8: Global Perspective 3 credits</u></h3>
         <p>To increase students' understanding of the growing interdependence of nations and peoples and develop their
             ability to apply a comparative perspective to cross-cultural social, economic and political experiences.</p>
         <table id="goal-8-table">
@@ -789,7 +814,7 @@
         </table>
     </div>
     <div id="goal-9" class="tabcontent">
-        <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
+        <h3><u>Goal 9: Ethical and Civic Responsibility 3 credits</u></h3>
         <p>To develop students' capacity to identify, discuss, and reflect upon the ethical dimensions of political,
             social, and personal life and to understand the ways in which they can exercise responsible and productive
             citizenship. While there are diverse views of social justice or the common good in a pluralistic society,
@@ -831,7 +856,7 @@
         </table>
     </div>
     <div id="goal-10" class="tabcontent">
-        <h3><u>Goal 10: People and the Environment</u></h3>
+        <h3><u>Goal 10: People and the Environment 3 credits</u></h3>
         <p>To improve students' understanding of today's complex environmental challenges. Students will examine the
             inter-relatedness of human society and the natural environment. Knowledge of both bio-physical principles
             and socio-cultural systems is the foundation for integrative and critical thinking about environmental issues.</p>
@@ -872,7 +897,35 @@
     </div>
     <div id="electives" class="tabcontent">
         <h3><u>Electives</u></h3>
+        <p>The following courses will not meet goal area requirements, but can be used as General Education Electives
+        to meet the 48-credit requirement</p>
         <table id="electives-table">
+            <tr><td>BIOL-310</td><td>Ecology</td><td>5</td></tr>
+            <tr><td>BIOL-312</td><td>Evolution</td><td>5</td></tr>
+            <tr><td>INFS-115</td><td>Information Access</td><td>2</td></tr>
+            <tr><td>INFS-315</td><td>Searching for Information</td><td>4</td></tr>
+            <tr><td>MATH-471</td><td>Abstract Algebra</td><td>4</td></tr>
+            <tr><td>METR-101</td><td>Your Academic Journey: Learning Community: Connect. Explore. Decide.</td><td>3</td></tr>
+            <tr><td>MIS-100</td><td>Fundamentals of Information Technology in Organizations</td><td>4</td></tr>
+            <tr><td>PRSP-301</td><td>Perspectives: Educational Philosophy and Planning</td><td>4</td></tr>
+            <tr><td>SCRW-314</td><td>New Screenplay Forms</td><td>4</td></tr>
+            <tr><td>SCRW-315</td><td>Film Production and Editing I</td><td>4</td></tr>
+            <tr><td>SCRW-416</td><td>Projects in Screenwriting</td><td>4</td></tr>
+            <tr><td>WRIT-101</td><td>Intro to College Writing: Learning Community: Connect. Explore. Decide.</td><td>4</td></tr>
+            <tr><td>WRIT-301</td><td>Professional and Technical Writing Careers</td><td>2</td></tr>
+            <tr><td>WRIT-302</td><td>Content Strategy</td><td>2</td></tr>
+            <tr><td>WRIT-344</td><td>Writing for Publication and Profit</td><td>4</td></tr>
+            <tr><td>WRIT-353</td><td>Writing Short Fiction</td><td>4</td></tr>
+            <tr><td>WRIT-355</td><td>Writing Children's Literature</td><td>4</td></tr>
+            <tr><td>WRIT-357</td><td>Writers as Readers</td><td>4</td></tr>
+            <tr><td>WRIT-358</td><td>1000 Words or Less</td><td>4</td></tr>
+            <tr><td>WRIT-371</td><td>Editing</td><td>4</td></tr>
+            <tr><td>WRIT-373</td><td>Writing and Designing for the Web I</td><td>4</td></tr>
+            <tr><td>WRIT-461</td><td>Writing and Technical Communication Capstone</td><td>4</td></tr>
+            <tr><td>WRIT-481</td><td>Advanced Creative Writing</td><td>5</td></tr>
+            <tr><td>WRIT-532</td><td>Writing about Place</td><td>4</td></tr>
+            <tr><td>WRIT-574</td><td>Usability and User Experience</td><td>4</td></tr>
+            <tr><td>WRIT-583</td><td>Writing Major Projects</td><td>4</td></tr>
         </table>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
