@@ -14,6 +14,7 @@
     <h2 class="major-name"></h2>
     <div id="core-courses">
         <h3><u>Core Courses</u></h3>
+        <p>Credits: <span id="core-courses-credits"></span></p>
         <table id="core-courses-table">
             <tr>
                 <th>Course</th>
@@ -24,6 +25,7 @@
     </div>
     <div id="liberal-studies">
         <h3><u>Liberal Studies</u></h3>
+        <p>Credits: <span id="liberal-studies-credits"></span> of 8</p>
         <table id="liberal-studies-table">
             <tr>
                 <th>Course</th>
@@ -34,10 +36,7 @@
     </div>
     <div id="rigr">
         <h3><u>Racial Issues Graduation Requirement</u></h3>
-        <p>All new or readmitted undergraduate students admitted fall 2016 or later must complete an approved learning
-            experience (at least 3 credits) with a significant focus on race and racism to graduate with a bachelor's
-            degree from the university.  Upon review, an approved prior learning, independent study, theory seminar or
-            transfer course from other accredited institutions may also be used to meet this graduation requirement.</p>
+        <p>Credits: <span id="rigr-credits"></span> of 3</p>
         <table id="rigr-table">
             <tr>
                 <th>Course</th>
@@ -48,12 +47,7 @@
     </div>
     <div id="goal-1">
         <h3><u>Goal 1: Communication</u></h3>
-        <p>To develop writers and speakers who use the English language effectively and who read, write, speak and
-            listen critically. As a base, all students should complete introductory communication requirements early
-            in their collegiate studies. Writing competency is an ongoing process to be reinforced through
-            writing-intensive courses and writing across the curriculum. Speaking and listening skills need
-            reinforcement through multiple opportunities for interpersonal communication, public speaking,
-            and discussion.</p>
+        <p>Credits: <span id="goal-1-credits"></span> of 9</p>
         <table id="goal-1-table">
             <tr>
                 <th>Course</th>
@@ -72,14 +66,7 @@
     </div>
     <div id="goal-3">
         <h3><u>Goal 3: Natural Sciences</u></h3>
-        <p>To improve students' understanding of natural science principles and of the methods of scientific inquiry,
-            i.e., the ways in which scientists investigate natural science phenomena. As a basis for lifelong learning,
-            students need to know the vocabulary of science and to realize that while a set of principles has been
-            developed through the work of previous scientists, ongoing scientific inquiry and new knowledge will bring
-            changes in some of the ways scientists view the world. By studying the problems that engage today's
-            scientists, students learn to appreciate the importance of science in their lives and to understand the
-            value of a scientific perspective. Students should be encouraged to study both the biological and physical
-            sciences.</p>
+        <p>Credits: <span id="goal-3-credits"></span> of 7</p>
         <table id="goal-3-table">
             <tr>
                 <th>Course</th>
@@ -90,7 +77,7 @@
     </div>
     <div id="goal-4">
         <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
-        <p>Credits: <span id="goal-4-credits"></span></p>
+        <p>Credits: <span id="goal-4-credits"></span> of 3</p>
         <table id="goal-4-table">
             <tr>
                 <th>Course</th>
@@ -101,7 +88,7 @@
     </div>
     <div id="goal-5">
         <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
-        <p>Credits: <span id="goal-5-credits"></span></p>
+        <p>Credits: <span id="goal-5-credits"></span> of 6</p>
         <table id="goal-5-table">
             <tr>
                 <th>Course</th>
@@ -112,7 +99,7 @@
     </div>
     <div id="goal-6">
         <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
-        <p>Credits: <span id="goal-6-credits"></span></p>
+        <p>Credits: <span id="goal-6-credits"></span> of 6</p>
         <p>This class</p>
         <table id="goal-6-table">
             <tr>
@@ -132,7 +119,7 @@
     </div>
     <div id="goal-7">
         <h3><u>Goal 7: Human Diversity</u></h3>
-        <p>Credits: <span id="goal-7-credits"></span></p>
+        <p>Credits: <span id="goal-7-credits"></span> of 3</p>
         <table id="goal-7-table">
             <tr>
                 <th>Course</th>
@@ -143,7 +130,7 @@
     </div>
     <div id="goal-8">
         <h3><u>Goal 8: Global Perspective</u></h3>
-        <p>Credits: <span id="goal-8-credits"></span></p>
+        <p>Credits: <span id="goal-8-credits"></span> of 3</p>
         <table id="goal-8-table">
             <tr>
                 <th>Course</th>
@@ -154,7 +141,7 @@
     </div>
     <div id="goal-9">
         <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
-        <p>Credits: <span id="goal-9-credits"></span></p>
+        <p>Credits: <span id="goal-9-credits"></span> of 3</p>
         <table id="goal-9-table">
             <tr>
                 <th>Course</th>
@@ -165,8 +152,7 @@
     </div>
     <div id="goal-10">
         <h3><u>Goal 10: People and the Environment</u></h3>
-        <p>Credits: <span id="goal-10-credits"></span></p>
-        <p>Three or more credits</p>
+        <p>Credits: <span id="goal-10-credits"></span> of 3</p>
         <table id="goal-10-table">
             <tr>
                 <th>Course</th>
@@ -177,7 +163,7 @@
     </div>
     <div id="electives">
         <h3><u>Electives</u></h3>
-        <p>48 credits needed</p>
+        <p>Fill as needed</p>
         <table id="electives-table">
             <tr>
                 <th>Course</th>
@@ -189,6 +175,10 @@
 </div>
 <div id="required-courses" class="tabcontent">
     <h2 class="major-name"></h2>
+    <p><button type="button" id="required-courses-download">Download class list</button></p>
+    <form id="csv-download" action="CSVGenerator.php" method="post">
+    </form>
+    <p>Credits: <span id="recomended-courses-credits"></span></p>
     <table id="recomended-courses-table">
         <tr>
             <th>Course</th>

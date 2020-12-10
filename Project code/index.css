@@ -48,3 +48,11 @@ table, th, td {
     border-collapse: collapse;
     width: 60%;
 }
+
+#major-search {
+    width: 30%;
+}
+
+.completed_course {
+    color: #00bf00;
+}
